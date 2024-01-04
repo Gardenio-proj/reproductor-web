@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+
+  #player {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  video,
+  audio {
+    width: 200%;
+    border: 5px solid #333;
+    /* Borde estilizado */
+    border-radius: 10px;
+    /* Esquinas redondeadas */
+  }
+
+  input {
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 600px) {
+    #player {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    video,
+    audio {
+      max-width: none;
+      /* Eliminar el máximo ancho para el reproductor de video */
+    }
+  }

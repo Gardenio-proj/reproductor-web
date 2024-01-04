@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproductor Multimedia</title>
+  <LINK rel=StyleSheet href="style.css" type="text/css" media=screen>
+</head>
+
+<body>
+
+  <div id="player">
+    <video controls id="videoPlayer">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+    <audio controls id="audioPlayer" style="display: none;">
+      Tu navegador no soporta la etiqueta de audio.
+    </audio>
+  </div>
+
+  <input type="file" id="mediaFile" accept=".mp4, .mp3" onchange="loadMedia()">
+  <br>
+  <label for="mediaLink">Enlace Multimedia:</label>
+  <input type="text" id="mediaLink" placeholder="Introduce el enlace">
+  <button onclick="loadMediaFromLink()">Cargar desde enlace</button>
+
+  <div id="player">
+    <div id="youtubePlayer"></div>
+  </div>
+
+  <label for="mediaLink">Enlace de YouTube:</label>
+  <input type="text" id="mediaLink" placeholder="Introduce el enlace">
+  <button onclick="loadYouTubeVideo()">Cargar desde YouTube</button>
+
+  <script src="./script.js"></script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+ 
+
+</body>
+
+</html>
